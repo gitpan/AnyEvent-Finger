@@ -1,0 +1,28 @@
+---
+abstract: 'Simple asynchronous finger client and server'
+author:
+  - 'Graham Ollis <plicease@cpan.org>'
+build_requires:
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300029, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: AnyEvent-Finger
+requires:
+  AnyEvent: 0
+  AnyEvent::Handle: 0
+  AnyEvent::Socket: 0
+  Carp: 0
+  Exporter: 0
+  base: 0
+  overload: 0
+  perl: v5.10.0
+resources:
+  bugtracker: https://github.com/plicease/AnyEvent-Finger/issues
+  repository: git://github.com/plicease/AnyEvent-Finger.git
+version: 0.01

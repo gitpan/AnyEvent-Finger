@@ -1,0 +1,11 @@
+---
+pod_spelling_system:
+  stopwords:
+    - hostname
+    - hostnames
+    - TCP
+    - IP
+
+pod_coverage:
+  private:
+    - AnyEvent::Finger.*#new

@@ -1,0 +1,53 @@
+{
+   "abstract" : "Simple asynchronous finger client and server",
+   "author" : [
+      "Graham Ollis <plicease@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300029, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "AnyEvent-Finger",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "AnyEvent" : "0",
+            "AnyEvent::Handle" : "0",
+            "AnyEvent::Socket" : "0",
+            "Carp" : "0",
+            "Exporter" : "0",
+            "base" : "0",
+            "overload" : "0",
+            "perl" : "v5.10.0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/plicease/AnyEvent-Finger/issues"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/plicease/AnyEvent-Finger.git",
+         "web" : "https://github.com/plicease/AnyEvent-Finger"
+      }
+   },
+   "version" : "0.01"
+}
+
