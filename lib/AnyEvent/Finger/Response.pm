@@ -5,7 +5,7 @@ use warnings;
 use v5.10;
 
 # ABSTRACT: Simple asynchronous finger response
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 
 sub say
@@ -31,7 +31,7 @@ AnyEvent::Finger::Response - Simple asynchronous finger response
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 METHODS
 

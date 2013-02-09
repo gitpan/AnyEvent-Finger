@@ -24,13 +24,9 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "AnyEvent" => 0,
     "AnyEvent::Handle" => 0,
-    "AnyEvent::Socket" => 0,
-    "Carp" => 0,
-    "Exporter" => 0,
-    "base" => 0,
-    "overload" => 0
+    "AnyEvent::Socket" => 0
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }

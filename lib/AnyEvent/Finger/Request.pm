@@ -6,7 +6,7 @@ use v5.10;
 use overload '""' => sub { shift->as_string };
 
 # ABSTRACT: Simple asynchronous finger request
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 
 sub new
@@ -68,7 +68,7 @@ AnyEvent::Finger::Request - Simple asynchronous finger request
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 CONSTRUCTOR
 

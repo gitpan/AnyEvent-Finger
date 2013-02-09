@@ -24,10 +24,6 @@
             "AnyEvent" : "0",
             "AnyEvent::Handle" : "0",
             "AnyEvent::Socket" : "0",
-            "Carp" : "0",
-            "Exporter" : "0",
-            "base" : "0",
-            "overload" : "0",
             "perl" : "v5.10.0"
          }
       },
@@ -42,12 +38,13 @@
       "bugtracker" : {
          "web" : "https://github.com/plicease/AnyEvent-Finger/issues"
       },
+      "homepage" : "http://search.cpan.org/dist/AnyEvent-Finger/",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/plicease/AnyEvent-Finger.git",
          "web" : "https://github.com/plicease/AnyEvent-Finger"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
 

@@ -17,12 +17,9 @@ requires:
   AnyEvent: 0
   AnyEvent::Handle: 0
   AnyEvent::Socket: 0
-  Carp: 0
-  Exporter: 0
-  base: 0
-  overload: 0
   perl: v5.10.0
 resources:
   bugtracker: https://github.com/plicease/AnyEvent-Finger/issues
+  homepage: http://search.cpan.org/dist/AnyEvent-Finger/
   repository: git://github.com/plicease/AnyEvent-Finger.git
-version: 0.01
+version: 0.02

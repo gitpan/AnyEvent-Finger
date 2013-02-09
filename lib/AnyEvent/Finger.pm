@@ -3,12 +3,12 @@ package AnyEvent::Finger;
 use strict;
 use warnings;
 use v5.10;
-use base qw( Exporter );
+BEGIN { our @ISA; push @ISA, 'Exporter' }
 
 our @EXPORT_OK = qw( finger_client finger_server );
 
 # ABSTRACT: Simple asynchronous finger client and server
-our $VERSION = '0.01'; # VERSION
+our $VERSION = '0.02'; # VERSION
 
 
 sub finger_client
@@ -48,7 +48,7 @@ AnyEvent::Finger - Simple asynchronous finger client and server
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
