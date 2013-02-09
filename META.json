@@ -24,6 +24,7 @@
             "AnyEvent" : "0",
             "AnyEvent::Handle" : "0",
             "AnyEvent::Socket" : "0",
+            "Exporter" : "0",
             "perl" : "v5.10.0"
          }
       },
@@ -45,6 +46,6 @@
          "web" : "https://github.com/plicease/AnyEvent-Finger"
       }
    },
-   "version" : "0.04"
+   "version" : "0.05"
 }
 

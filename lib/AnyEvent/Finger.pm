@@ -3,12 +3,13 @@ package AnyEvent::Finger;
 use strict;
 use warnings;
 use v5.10;
+use Exporter ();
 
 our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( finger_client finger_server );
 
 # ABSTRACT: Simple asynchronous finger client and server
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 
 sub finger_client
@@ -48,7 +49,7 @@ AnyEvent::Finger - Simple asynchronous finger client and server
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -72,7 +73,7 @@ server:
  );
  
  finger_server sub {
-   my $tx = shift;
+   my $tx = shift; # isa AnyEvent::Finger::Transaction
    if($tx->req->listing_request)
    {
      # respond if remote requests list of users
@@ -91,6 +92,8 @@ server:
        $tx->res->say('no such user');
      }
    }
+   # required! done generating the reply,
+   # close the connection with the client.
    $tx->res->done;
  };
 

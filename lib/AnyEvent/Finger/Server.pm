@@ -12,7 +12,7 @@ use AnyEvent::Finger::Request;
 use AnyEvent::Finger::Response;
 
 # ABSTRACT: Simple asynchronous finger server
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 
 sub new
@@ -159,7 +159,7 @@ AnyEvent::Finger::Server - Simple asynchronous finger server
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -177,7 +177,6 @@ version 0.04
    {
      # respond if remote requests list of users
      $tx->res->say('users:', keys %users);
-     $tx->res->done;
    }
    else
    {
@@ -185,15 +184,16 @@ version 0.04
      if(defined $users{$tx->req->username})
      {
        $tx->res->say($users{$tx->req->username});
-       $tx->res->done;
      }
      # respond if user does not exist
      else
      {
        $tx->res->say('no such user');
-       $tx->res->done;
      }
    }
+   # required! done generating the reply,
+   # close the connection with the client.
+   $tx->res->done;
  });
 
 =head1 DESCRIPTION

@@ -6,7 +6,7 @@ use v5.10;
 use overload '""' => sub { shift->as_string };
 
 # ABSTRACT: Simple asynchronous finger transaction
-our $VERSION = '0.04'; # VERSION
+our $VERSION = '0.05'; # VERSION
 
 
 sub res { shift->{res} }
@@ -31,7 +31,7 @@ AnyEvent::Finger::Transaction - Simple asynchronous finger transaction
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 METHODS
 
