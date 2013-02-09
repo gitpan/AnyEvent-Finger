@@ -8,7 +8,7 @@ use AnyEvent::Handle;
 use Carp qw( carp );
 
 # ABSTRACT: Simple asynchronous finger client
-our $VERSION = '0.03'; # VERSION
+our $VERSION = '0.04'; # VERSION
 
 
 sub new
@@ -84,7 +84,7 @@ AnyEvent::Finger::Client - Simple asynchronous finger client
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 

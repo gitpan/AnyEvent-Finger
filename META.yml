@@ -22,4 +22,4 @@ resources:
   bugtracker: https://github.com/plicease/AnyEvent-Finger/issues
   homepage: http://search.cpan.org/dist/AnyEvent-Finger/
   repository: git://github.com/plicease/AnyEvent-Finger.git
-version: 0.03
+version: 0.04
