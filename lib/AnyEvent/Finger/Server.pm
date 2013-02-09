@@ -12,7 +12,7 @@ use AnyEvent::Finger::Request;
 use AnyEvent::Finger::Response;
 
 # ABSTRACT: Simple asynchronous finger server
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 
 sub new
@@ -129,7 +129,7 @@ sub start
   $self->{guard} = tcp_server $args->{hostname}, $port, $cb, sub {
     my($fh, $host, $port) = @_;
     $self->{bindport} = $port;
-    $args->{on_bind}->();
+    $args->{on_bind}->($self);
   };
   
   $self;
@@ -159,7 +159,7 @@ AnyEvent::Finger::Server - Simple asynchronous finger server
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
@@ -231,6 +231,8 @@ on_bind
 
 A callback subref to be called when the port number is known.  This is
 useful when ephemeral port is used but other parts of the code depend on it.
+The first argument to the callback will be the L<AnyEvent::Finger::Server>
+object.
 
 =item *
 

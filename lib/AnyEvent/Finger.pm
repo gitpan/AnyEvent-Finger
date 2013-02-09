@@ -8,7 +8,7 @@ BEGIN { our @ISA; push @ISA, 'Exporter' }
 our @EXPORT_OK = qw( finger_client finger_server );
 
 # ABSTRACT: Simple asynchronous finger client and server
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 
 sub finger_client
@@ -48,7 +48,7 @@ AnyEvent::Finger - Simple asynchronous finger client and server
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
