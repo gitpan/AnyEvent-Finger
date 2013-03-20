@@ -37,15 +37,15 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/plicease/AnyEvent-Finger/issues"
+         "web" : "https://github.com/plicease/anyevent-finger/issues"
       },
-      "homepage" : "http://search.cpan.org/dist/AnyEvent-Finger/",
+      "homepage" : "http://perl.wdlabs.com/AnyEvent-Finger",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/plicease/AnyEvent-Finger.git",
-         "web" : "https://github.com/plicease/AnyEvent-Finger"
+         "url" : "git://github.com/plicease/anyevent-finger.git",
+         "web" : "https://github.com/plicease/anyevent-finger"
       }
    },
-   "version" : "0.06"
+   "version" : "0.07"
 }
 

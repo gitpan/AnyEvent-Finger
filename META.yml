@@ -20,7 +20,7 @@ requires:
   Exporter: 0
   perl: v5.10.0
 resources:
-  bugtracker: https://github.com/plicease/AnyEvent-Finger/issues
-  homepage: http://search.cpan.org/dist/AnyEvent-Finger/
-  repository: git://github.com/plicease/AnyEvent-Finger.git
-version: 0.06
+  bugtracker: https://github.com/plicease/anyevent-finger/issues
+  homepage: http://perl.wdlabs.com/AnyEvent-Finger
+  repository: git://github.com/plicease/anyevent-finger.git
+version: 0.07
