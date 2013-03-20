@@ -5,7 +5,7 @@ use warnings;
 use v5.10;
 
 # ABSTRACT: Simple asynchronous finger response
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 
 sub say
@@ -31,7 +31,13 @@ AnyEvent::Finger::Response - Simple asynchronous finger response
 
 =head1 VERSION
 
-version 0.05
+version 0.06
+
+=head1 DESCRIPTION
+
+This class provides an interface for constructing a response
+from a finger server for L<AnyEvent::Finger::Server>.  See
+the documentation on that class for more details.
 
 =head1 METHODS
 

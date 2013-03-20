@@ -4,7 +4,7 @@
       "Graham Ollis <plicease@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300029, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 4.300031, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -46,6 +46,6 @@
          "web" : "https://github.com/plicease/AnyEvent-Finger"
       }
    },
-   "version" : "0.05"
+   "version" : "0.06"
 }
 

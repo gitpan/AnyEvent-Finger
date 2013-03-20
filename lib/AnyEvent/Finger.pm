@@ -9,7 +9,7 @@ our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( finger_client finger_server );
 
 # ABSTRACT: Simple asynchronous finger client and server
-our $VERSION = '0.05'; # VERSION
+our $VERSION = '0.06'; # VERSION
 
 
 sub finger_client
@@ -49,7 +49,7 @@ AnyEvent::Finger - Simple asynchronous finger client and server
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -96,6 +96,13 @@ server:
    # close the connection with the client.
    $tx->res->done;
  };
+
+=head1 DESCRIPTION
+
+This distribution provides an asynchronous finger server and 
+client which can be used by any event loop supported by 
+L<AnyEvent>.  This specific module provides a simple procedural
+interface to client and server classes also in this distribution.
 
 =head1 FUNCTIONS
 

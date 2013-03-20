@@ -2,7 +2,7 @@ NAME
     AnyEvent::Finger - Simple asynchronous finger client and server
 
 VERSION
-    version 0.05
+    version 0.06
 
 SYNOPSIS
     client:
@@ -48,6 +48,12 @@ SYNOPSIS
        # close the connection with the client.
        $tx->res->done;
      };
+
+DESCRIPTION
+    This distribution provides an asynchronous finger server and client
+    which can be used by any event loop supported by AnyEvent. This specific
+    module provides a simple procedural interface to client and server
+    classes also in this distribution.
 
 FUNCTIONS
   finger_client( $server, $request, $callback, [ \%options ] )

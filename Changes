@@ -1,7 +1,10 @@
 Revision history for AnyEvent-Finger
 
+0.06      2013-03-20 17:48:44 America/New_York
+  - documentation updates
+
 0.05      2013-02-09 18:46:53 America/New_York
-  - documentaton tweaks
+  - documentation tweaks
 
 0.04      2013-02-09 17:00:20 America/New_York
   - minor inheritence tweak
