@@ -2,7 +2,7 @@ NAME
     AnyEvent::Finger - Simple asynchronous finger client and server
 
 VERSION
-    version 0.07
+    version 0.08
 
 SYNOPSIS
     client:

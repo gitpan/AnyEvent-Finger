@@ -1,3 +1,4 @@
+.travis.yml
 Changes
 INSTALL
 LICENSE
@@ -16,13 +17,15 @@ lib/AnyEvent/Finger/Request.pm
 lib/AnyEvent/Finger/Response.pm
 lib/AnyEvent/Finger/Server.pm
 lib/AnyEvent/Finger/Transaction.pm
+t/00_diag.t
+t/00_diag.txt
+t/00_use.t
 t/client.t
 t/forward.t
 t/forward_deny.t
 t/request.t
 t/server.t
 t/simple.t
-t/use.t
 xt/release/build_environment.t
 xt/release/changes.t
 xt/release/eol.t

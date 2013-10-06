@@ -6,7 +6,7 @@ use v5.10;
 use overload '""' => sub { shift->as_string };
 
 # ABSTRACT: Simple asynchronous finger transaction
-our $VERSION = '0.07'; # VERSION
+our $VERSION = '0.08'; # VERSION
 
 
 sub res { shift->{res} }
@@ -31,7 +31,7 @@ AnyEvent::Finger::Transaction - Simple asynchronous finger transaction
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 DESCRIPTION
 
@@ -41,7 +41,7 @@ L<AnyEvent::Finger::Server> server instance.  It also provides
 information about the connection (the remote, local ports and
 the remote client's address).
 
-=head1 METHODS
+=head1 ATTRIBUTES
 
 =head2 $tx-E<gt>req
 

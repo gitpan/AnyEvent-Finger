@@ -9,7 +9,7 @@ our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( finger_client finger_server );
 
 # ABSTRACT: Simple asynchronous finger client and server
-our $VERSION = '0.07'; # VERSION
+our $VERSION = '0.08'; # VERSION
 
 
 sub finger_client
@@ -49,7 +49,7 @@ AnyEvent::Finger - Simple asynchronous finger client and server
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -142,6 +142,8 @@ for clients connecting via the loopback interface (localhost).
 L<RFC1288|http://tools.ietf.org/html/rfc1288>,
 L<AnyEvent::Finger::Client>,
 L<AnyEvent::Finger::Server>
+
+=cut
 
 =head1 AUTHOR
 
