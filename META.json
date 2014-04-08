@@ -4,7 +4,7 @@
       "Graham Ollis <plicease@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132661",
+   "generated_by" : "Dist::Zilla version 5.015, CPAN::Meta::Converter version 2.140640",
    "license" : [
       "perl_5"
    ],
@@ -14,9 +14,14 @@
    },
    "name" : "AnyEvent-Finger",
    "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Module::Build" : "0.3601"
+         }
+      },
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30"
+            "Module::Build" : "0.3601"
          }
       },
       "runtime" : {
@@ -28,7 +33,7 @@
             "AnyEvent::Handle" : "0",
             "AnyEvent::Socket" : "0",
             "Exporter" : "0",
-            "perl" : "v5.10.0"
+            "perl" : "5.006"
          }
       },
       "test" : {
@@ -49,6 +54,6 @@
          "web" : "https://github.com/plicease/anyevent-finger"
       }
    },
-   "version" : "0.08"
+   "version" : "0.09"
 }
 

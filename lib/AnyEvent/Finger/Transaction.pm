@@ -2,11 +2,10 @@ package AnyEvent::Finger::Transaction;
 
 use strict;
 use warnings;
-use v5.10;
 use overload '""' => sub { shift->as_string };
 
 # ABSTRACT: Simple asynchronous finger transaction
-our $VERSION = '0.08'; # VERSION
+our $VERSION = '0.09'; # VERSION
 
 
 sub res { shift->{res} }
@@ -25,13 +24,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 AnyEvent::Finger::Transaction - Simple asynchronous finger transaction
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 

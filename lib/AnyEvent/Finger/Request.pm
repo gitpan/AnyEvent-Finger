@@ -2,23 +2,22 @@ package AnyEvent::Finger::Request;
 
 use strict;
 use warnings;
-use v5.10;
 use overload '""' => sub { shift->as_string };
 
 # ABSTRACT: Simple asynchronous finger request
-our $VERSION = '0.08'; # VERSION
+our $VERSION = '0.09'; # VERSION
 
 
 sub new
 {
-  bless { raw => "$_[1]" // '' }, $_[0];
+  bless { raw => "$_[1]" }, $_[0];
 }
 
 
 sub verbose
 {
   my($self) = @_;
-  $self->{verbose} //= ($self->{raw} =~ /^\/W/ ? 1 : 0);
+  defined $self->{verbose} ? $self->{verbose} : $self->{verbose} = ($self->{raw} =~ /^\/W/ ? 1 : 0);
 }
 
 
@@ -39,7 +38,8 @@ sub username
 sub hostnames
 {
   my($self) = @_;
-  $self->{hostnames} //= ($self->{raw} =~ /\@(.*)$/ ? [split '@', $1] : []);
+  return $self->{hostnames} if defined $self->{hostnames};
+  $self->{hostnames} = ($self->{raw} =~ /\@(.*)$/ ? [split '@', $1] : []);
 }
 
 
@@ -62,13 +62,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 AnyEvent::Finger::Request - Simple asynchronous finger request
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 

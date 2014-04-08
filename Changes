@@ -1,5 +1,8 @@
 Revision history for AnyEvent-Finger
 
+0.09      2014-04-08 14:38:42 -0400
+  - Support for Perl 5.8
+
 0.08      2013-10-06 01:15:35 -0400
   - documentation tweaks
 

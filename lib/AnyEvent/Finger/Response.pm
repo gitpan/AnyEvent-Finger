@@ -2,10 +2,9 @@ package AnyEvent::Finger::Response;
 
 use strict;
 use warnings;
-use v5.10;
 
 # ABSTRACT: Simple asynchronous finger response
-our $VERSION = '0.08'; # VERSION
+our $VERSION = '0.09'; # VERSION
 
 
 sub say
@@ -25,13 +24,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 AnyEvent::Finger::Response - Simple asynchronous finger response
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 DESCRIPTION
 

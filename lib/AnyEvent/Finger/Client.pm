@@ -2,24 +2,25 @@ package AnyEvent::Finger::Client;
 
 use strict;
 use warnings;
-use v5.10;
 use AnyEvent::Socket qw( tcp_connect );
 use AnyEvent::Handle;
 use Carp qw( carp );
 
 # ABSTRACT: Simple asynchronous finger client
-our $VERSION = '0.08'; # VERSION
+our $VERSION = '0.09'; # VERSION
 
 
 sub new
 {
   my $class = shift;
-  my $args     = ref $_[0] eq 'HASH' ? (\%{$_[0]}) : ({@_});
+  my $args  = ref $_[0] eq 'HASH' ? (\%{$_[0]}) : ({@_});
+  my $port  = $args->{port};
+  $port = 79 unless defined $port;
   bless { 
-    hostname => $args->{hostname} // '127.0.0.1',  
-    port     => $args->{port}     // 79,
-    timeout  => $args->{timeout}  // 60,
-    on_error => $args->{on_error} // sub { carp $_[0] },
+    hostname => $args->{hostname} || '127.0.0.1',  
+    port     => $port,
+    timeout  => $args->{timeout}  || 60,
+    on_error => $args->{on_error} || sub { carp $_[0] },
   }, $class;
 }
 
@@ -27,12 +28,16 @@ sub new
 sub finger
 {
   my $self     = shift;
-  my $request  = shift // '';
-  my $callback = shift // sub {};
+  my $request  = shift;
+  $request = '' unless defined $request;
+  my $callback = shift || sub {};
   my $args     = ref $_[0] eq 'HASH' ? (\%{$_[0]}) : ({@_});
   
-  $args->{$_} //= $self->{$_}
-    for qw( hostname port timeout on_error );
+  for(qw( hostname port timeout on_error ))
+  {
+    next if defined $args->{$_};
+    $args->{$_} = $self->{$_};
+  }
   
   tcp_connect $args->{hostname}, $args->{port}, sub {
   
@@ -78,13 +83,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 AnyEvent::Finger::Client - Simple asynchronous finger client
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -99,10 +106,10 @@ version 0.08
  
  $client->finger('username', sub {
    my($lines) = @_;
-   say "[response]";
-   say join "\n", @$lines;
+   print "[response]\n";
+   print join "\n", @$lines;
  }, on_error => sub {
-   say STDERR shift;
+   print STDERR shift;
  });
 
 =head1 DESCRIPTION

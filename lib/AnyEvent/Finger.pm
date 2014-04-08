@@ -2,14 +2,13 @@ package AnyEvent::Finger;
 
 use strict;
 use warnings;
-use v5.10;
 use Exporter ();
 
 our @ISA = qw( Exporter );
 our @EXPORT_OK = qw( finger_client finger_server );
 
 # ABSTRACT: Simple asynchronous finger client and server
-our $VERSION = '0.08'; # VERSION
+our $VERSION = '0.09'; # VERSION
 
 
 sub finger_client
@@ -22,17 +21,18 @@ sub finger_client
 }
 
 
+# keep the server object in scope so that
+# we don't unbind from the port.  If you 
+# don't want this, then use the OO interface
+# for ::Server instead.
+my $keep = [];
+
 sub finger_server
 {
   require AnyEvent::Finger::Server;
   my $server = AnyEvent::Finger::Server
     ->new
     ->start(@_);
-  # keep the server object in scope so that
-  # we don't unbind from the port.  If you 
-  # don't want this, then use the OO interface
-  # for ::Server instead.
-  state $keep = [];
   push @$keep, $server;
   return $server;
 }
@@ -43,13 +43,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 AnyEvent::Finger - Simple asynchronous finger client and server
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
@@ -59,8 +61,8 @@ client:
  
  finger_client 'localhost', 'username', sub {
    my($lines) = @_;
-   say "[response]";
-   say join "\n", @$lines;
+   print "[response]\n";
+   print join "\n", @$lines;
  };
 
 server:
